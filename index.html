@@ -293,6 +293,14 @@
             margin: 0 auto 1.5rem;
             box-shadow: 0 8px 25px rgba(196, 154, 126, 0.2);
             animation: subtlePulse 3s infinite;
+            overflow: hidden;
+        }
+        
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
         }
         
         @keyframes subtlePulse {
@@ -340,14 +348,21 @@
         }
         
         .work-image {
-            height: 180px;
+            height: 230px;
             background: linear-gradient(135deg, #e8ddd4, #d4af98);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2.5rem;
+            font-size: 4rem;
             position: relative;
+            overflow: hidden;
+        }
+        
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .work-image::after {
@@ -386,7 +401,10 @@
         
         .skill-item {
             margin-bottom: 2.5rem;
-            last-child: { margin-bottom: 0; }
+        }
+        
+        .skill-item:last-child {
+            margin-bottom: 0;
         }
         
         .skill-header {
@@ -574,7 +592,7 @@
         <div class="about-content fade-in">
             <div class="avatar-section">
                 <div class="avatar">
-                    <img src="images\avatar.png" alt="Profile Picture" width="100%" height="100%" style="object-fit: cover; border-radius: 15px;">
+                    <img src="images\avatar.png" alt="Profile Picture">
                 </div>
                 <h3>繪川 光輝</h3>
                 <p style="color: #9d8971; font-size: 0.9rem; margin-top: 0.5rem;">文字與夢想的織者</p>
@@ -599,9 +617,11 @@
         <h2 class="section-title">第二章：創作的軌跡</h2>
         <div class="card-grid fade-in">
             <div class="work-item">
-                <div class="work-image">🎨</div>
+                <div class="work-image">
+                    <img src="images/Test1.png" alt="寧靜的UI">
+                </div>
                 <div class="work-content">
-                    <h3>「寧靜的UI」</h3>
+                    <h3>2D_RPG遊戲</h3>
                     <p>將日本的侘寂美學融入數位介面的作品。追求留白之美與易用性的和諧。如同茶室般靜謐的空間在螢幕上呈現。</p>
                 </div>
             </div>
@@ -629,8 +649,8 @@
         <div class="skills-container fade-in">
             <div class="skill-item">
                 <div class="skill-header">
-                    <span class="skill-name">UI/UX 設計</span>
-                    <span class="skill-level">高級</span>
+                    <span class="skill-name">遊戲設計</span>
+                    <span class="skill-level">3D,2D遊戲</span>
                 </div>
                 <div class="skill-progress">
                     <div class="skill-fill" style="width: 90%"></div>
@@ -638,7 +658,7 @@
             </div>
             <div class="skill-item">
                 <div class="skill-header">
-                    <span class="skill-name">前端開發</span>
+                    <span class="skill-name">App開發</span>
                     <span class="skill-level">中級</span>
                 </div>
                 <div class="skill-progress">
@@ -656,7 +676,7 @@
             </div>
             <div class="skill-item">
                 <div class="skill-header">
-                    <span class="skill-name">視覺設計</span>
+                    <span class="skill-name">剪接影片</span>
                     <span class="skill-level">高級</span>
                 </div>
                 <div class="skill-progress">
@@ -802,4 +822,3 @@
         });
     </script>
 </body>
-</html>
