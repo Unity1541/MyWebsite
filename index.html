@@ -218,6 +218,25 @@
         }
         
         /* Cards with novel-like styling */
+        /*  
+        使用網格佈局顯示作品卡片
+        每個卡片的最小寬度為320px，最大寬度為可用空間
+        並且在卡片之間有2rem的間距
+        卡片的背景為半透明白色，帶有圓角和陰影
+        卡片在懸停時會有輕微的上升效果和更強的陰影
+        卡片的標題和描述使用柔和的顏色，並且有
+        卡片的標題使用較大的字體，並且有下方的間距
+        卡片的描述使用較小的字體，並且行高為1.7
+        卡片的邊框使用柔和的顏色，並且有
+        卡片的上方有一條漸變線條作為裝飾
+        卡片在懸停時會有輕微的上升效果和更強的陰影
+        卡片的標題使用較大的字體，並且有下方的間距
+        然後因為 Grid 會按照 HTML 中的順序（從左到右、從上到下）自動排列：
+        第一個 work-item → 第一個位置
+        第二個 work-item → 第二個位置
+        第三個 work-item → 第三個位置
+        新增的第四個 work-item → 第四個位置（右邊）
+        */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -348,7 +367,7 @@
         }
         
         .work-image {
-            height: 330px; /* 照片的尺寸位置大小*/
+            height: 320px; /* 照片的尺寸位置大小*/
             background: linear-gradient(135deg, #e8ddd4, #d4af98);
             display: flex;
             align-items: center;
@@ -635,12 +654,25 @@
                 </div>
             </div>
             <div class="work-item">
-                <div class="work-image">📚</div>
+                <div class="work-image">
+                     <img src="images/Test4.png" alt="新作品">
+                </div>
                 <div class="work-content">
                     <h3>文字小說</h3>
-                    <p>重視閱讀體驗的電子書閱讀器設計。將閱讀紙本書的舒適感與數位便利性結合。演繹與文字的全新相遇。</p>
+                    <p>練習視覺版小說，與玩家互動</p>
                 </div>
             </div>
+            <!-- 新增的第四個作品項目 - 開始 -->
+            <div class="work-item">
+                <div class="work-image">
+                    <img src="images/Test4.png" alt="新作品">
+                </div>
+                <div class="work-content">
+                    <h3>新作品項目</h3>
+                    <p>這是新增的第四個作品項目，你可以在這裡放置你的新作品描述。</p>
+                </div>
+            </div>
+            <!-- 新增的第四個作品項目 - 結束 -->
         </div>
     </section>
     
@@ -715,7 +747,7 @@
     </section>
     
     <footer>
-        <p>&copy; 2025 夢野文 Portfolio. 所有故事，都以愛編織。</p>
+        <p>&copy; 2025 夢野文 Portfolio. 所有遊戲製作。</p>
         <div class="social-links">
             <a href="#" title="Email" aria-label="Email">
                 <i class="fa fa-envelope"></i>
